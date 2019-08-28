@@ -23,29 +23,35 @@ int main()
 
     cout << "Inorder Traversal:\n";
     T.InorderPrint();
-    cout << endl;
+    cout << endl << endl;
     cout << "Level-order Traversal:\n";
     T.Levelorder();
-    cout << endl;
+    cout << endl << endl;
+
+    T.DeleteBST(8);         // 刪除龜仙人(8), 確認比克(513)會成為新的root
+
+    cout << "Level-order Traversal:\n";
+    T.Levelorder();
+    cout << endl << endl;
 
     TreeNode *node = T.Search(1000);
     if(node != NULL)
     {
-    	cout << "There is " << node->GetElement() << "(" << node->GetKey() << ")" << endl;
+        cout << "There is " << node->GetElement() << "(" << node->GetKey() << ")" << endl;
     }
     else
     {
-    	cout << "no element with Key(1000)" << endl;
+        cout << "no element with Key(1000)" << endl;
     }
 
-    node = T.Search(73);
+    node = T.Search(8);
     if(node != NULL)
     {
-    	cout << "There is " << node->GetElement() << "(" << node->GetKey() << ")" << endl;
+        cout << "There is " << node->GetElement() << "(" << node->GetKey() << ")" << endl;
     }
     else
     {
-    	cout << "no element with Key(73)" << endl;
+        cout << "no element with Key(8)" << endl;
     }
 
     Pause();

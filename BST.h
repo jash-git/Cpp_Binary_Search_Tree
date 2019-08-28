@@ -15,6 +15,7 @@ class BST
         void InsertBST(int key, string element);
         void InorderPrint();
         void Levelorder();
+        void DeleteBST(int key);
 };
 
 #endif // BST_H
