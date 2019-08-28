@@ -16,11 +16,11 @@ private:
     int key;
     string element;
 public:
-    TreeNode():leftchild(0),rightchild(0),parent(0),key(0),element(""){};
-    TreeNode(int a, string b):leftchild(0),rightchild(0),parent(0),key(a),element(b){};
+    TreeNode();
+    TreeNode(int a, string b);
 
-    int GetKey(){return key;}              // 為了在main()要能夠檢視node是否正確
-    string GetElement(){return element;}   // 才需要這兩個member function讀取private data
+    int GetKey();// 為了在main()要能夠檢視node是否正確
+    string GetElement();// 才需要這兩個member function讀取private data
 
     // 其餘情況, 因為class BST是class TreeNode的friend class
     // 在class BST的member function中, 可以直接存取class TreeNode的private data
